@@ -1,0 +1,18 @@
+body{
+   position: relative;
+}
+
+.bt{
+    position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 25%;
+  }
+  .bt{
+    width: 800px;
+    height: 450px;
+  }
+  .re{
+    position: absolute;
+    right: 0%;
+  }
