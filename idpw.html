@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let t=0;
+        var id=new Array();
+        var pw=new Array();
+        
+        function make(){
+            let a,b,i,c=0;
+            a=document.getElementById("idm").value;
+            b=document.getElementById("pwm").value;
+           for(i=0;i<10;i++){
+            if(b.includes(i)){
+                c=1;
+                break;
+            }
+           }
+           if(c==0){
+            alert("비밀번호에는 숫자를 포함해야 합니다.");
+            return 0;
+           }
+            id[t]=a;
+            pw[t]=b;
+            t++;
+        }
+        function c(){
+            let i;
+            var idc=document.getElementById("id").value;
+            var pwc=document.getElementById("pw").value;
+            for(i=0;i<id.length;i++){
+                if(id[i]==idc){
+                    if(pw[i]==pwc){
+                        alert("로그인 성공");
+                    }
+                    else{
+                        alert("틀린 비밀번호입니다");
+                    }
+                    return 0;
+                }
+            }
+            alert("존재하지 않는 아이디입니다");
+        }
+    </script>
+    <input type="text" id="idm" placeholder="id">
+    <input type="password" id="pwm" placeholder="password">
+    <button onclick="make()">아이디 생성</button>
+    <br>
+    <input type="text" id="id" placeholder="id">
+    <input type="password" id="pw" placeholder="password">
+    <button onclick="c()">로그인</button>
+</body>
+</html>
